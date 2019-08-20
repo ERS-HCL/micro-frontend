@@ -1,5 +1,30 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+----------------------------------------------------------------------------------------------------
+# Microfrontend VOD 
+
+Entry point and container application for a micro frontend demo.
+
+A React VOD application, which renders a navigation bar, and uses React Router to select a
+microfrontend to render onto the page.
+
+# Getting started
+
+1. Clone the repo
+2. `yarn install`
+3. `yarn start`
+
+You can run the container on its own, but for it to actually do anything you'll
+also need to be running:
+
+- the [`content`](https://github.com/micro-frontend/content) server
+- the [`movie`](https://github.com/micro-frontend/movie/) micro frontend
+- the [`music`](https://github.com/micro-frontend/music/) micro frontend
+- the [`news`](https://github.com/micro-frontend/news/) micro frontend
+- the [`sports`](https://github.com/micro-frontend/sports/) micro frontend
+- the [`player`](https://github.com/micro-frontend/player/) micro frontend
+-----------------------------------------------------------------------------------------------------
+
 ## Available Scripts
 
 In the project directory, you can run:
