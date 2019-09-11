@@ -15,7 +15,7 @@ class MicroFrontend extends React.Component {
 
     fetchMicrofendScript = (scriptId, retryCount) => {
         const { host, document } = this.props;
-        fetch(`${host}/asset-manifest1.json`)
+        fetch(`${host}/asset-manifest.json`)
         .then(res => res.json())
         .then(manifest => {
             const script = document.createElement('script');
@@ -28,7 +28,9 @@ class MicroFrontend extends React.Component {
             retryCount++;
             console.error('Error while loading the script :', error, " retry count ",retryCount);
             if (retryCount < 3) {
-                this.fetchMicrofendScript(scriptId, retryCount);
+                setTimeout( () => {
+                    this.fetchMicrofendScript(scriptId, retryCount);
+                }, 2000);
             }
         });
     }

@@ -11,10 +11,21 @@ A React VOD application, having a navigation bar, used React Router to select th
 
 1. Clone the repo
 2. `yarn install`
-3. `yarn start`
+3. `cd app-container`
+4. `yarn startAll`
+
+This will start the following processes:
+movie microfrontend on port 3001
+music microfrontend on port 3002
+news microfrontend on port 3003
+sports microfrontend on port 3004
+player microfrontend on port 3005
+static content will be served on port 5000
+Container application on port 3000
+
+Navigate to http://localhost:3000 to see the micro-frontends running through container application
 
 App container can run independently, but for it to be fully functional you need following to be running:
-
 - the [`content`](https://github.com/ERS-HCL/micro-frontend/tree/master/content) server
 - the [`movie`](https://github.com/ERS-HCL/micro-frontend/tree/master/movie/) micro frontend
 - the [`music`](https://github.com/ERS-HCL/micro-frontend/tree/master/music/) micro frontend
@@ -22,43 +33,6 @@ App container can run independently, but for it to be fully functional you need 
 - the [`sports`](https://github.com/ERS-HCL/micro-frontend/tree/master/sports/) micro frontend
 - the [`player`](https://github.com/ERS-HCL/micro-frontend/tree/master/player/) micro frontend
 -----------------------------------------------------------------------------------------------------
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 

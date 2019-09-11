@@ -12,7 +12,13 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "startAll": "concurrently \"cd ../content && yarn start\" \"cd ../movie && yarn start\" \"cd ../music && yarn start\" \"cd ../sports && yarn start\" \"cd ../news && yarn start\" \"yarn start\"",
+    "startAll": "run-p build:content build:movie build:music build:news build:sports build:player start",
+    "build:content": "cd ../content && yarn start",
+    "build:movie": "cd ../movie && yarn start",
+    "build:music": "cd ../music && yarn start",
+    "build:news": "cd ../news && yarn start",
+    "build:sports": "cd ../sports && yarn start",
+    "build:player": "cd ../player && yarn start",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
