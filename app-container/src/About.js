@@ -11,6 +11,7 @@ const About = () => (
             It's useful for breaking up monolithic frontend codebases into smaller, simpler
             applications that can be delivered to production by multiple teams independently.
         </p>
+        {/* eslint-disable-next-line */}
         <img id='mfImg'></img>
     </main>
 )

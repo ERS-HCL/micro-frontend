@@ -9,7 +9,7 @@ const {
   REACT_APP_MUSIC_HOST: musicHost,
   REACT_APP_SPORTS_HOST: sportsHost,
   REACT_APP_NEWS_HOST: newsHost,
-  REACT_APP_PLAYER_HOST: playerHost
+  REACT_APP_PLAYER_HOST: playerHost,
 } = process.env;
 
 const Movies = ({ history }) => (
