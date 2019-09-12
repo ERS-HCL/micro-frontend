@@ -1,0 +1,50 @@
+{
+  "name": "web-component",
+  "version": "1.0.0",
+  "description": "Micro frontend based on different tech stacks",
+  "main": "index.js",
+  "scripts": {
+    "clean:dist": "rimraf dist",
+    "start": "run-s clean:dist build:microfends start:dev",
+    "startAll": "run-p serve:content start",
+    "start:dev": "webpack-dev-server --env.development --progress --open",
+    "build": "run-s clean:dist build:prod build:microfends",
+    "build:prod": "webpack --env.production",
+    "build:microfends": "run-p build:*mf build:player",
+    "build:angularmf": "cd ../angular-mf && webpack --config webpack.prod.js",
+    "build:reactmf": "cd ../react-mf && webpack --config webpack.prod.js",
+    "build:player": "cd ../player && webpack --config webpack.prod.js",
+    "serve:content": "cd ../content && yarn build && yarn start",
+    "test": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0-beta.32",
+    "@babel/runtime": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.1.0",
+    "webpack": "4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.2"
+  }
+}

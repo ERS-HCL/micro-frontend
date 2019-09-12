@@ -1,0 +1,11 @@
+{
+  "name": "demo-content",
+  "version": "1.0.0",
+  "description": "Static content for a micro frontends demo",
+  "scripts": {
+    "build": "node staticData.js",
+    "start": "serve --port 5001 --cors data"
+  },
+  "author": "Deepak Bohra",
+  "license": "ISC"
+}
