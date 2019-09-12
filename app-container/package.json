@@ -12,8 +12,8 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "startAll": "run-p build:content build:movie build:music build:news build:sports build:player start",
-    "build:content": "cd ../content && yarn start",
+    "startAll": "npm-run-all --parallel serve:content build:* start",
+    "serve:content": "cd ../content && yarn build && yarn start",
     "build:movie": "cd ../movie && yarn start",
     "build:music": "cd ../music && yarn start",
     "build:news": "cd ../news && yarn start",
@@ -23,7 +23,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "micro-frontend"
   },
   "browserslist": {
     "production": [
