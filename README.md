@@ -15,13 +15,13 @@ A React VOD application, having a navigation bar, used React Router to select th
 4. `yarn startAll`
 
 This will start the following processes:
-movie microfrontend on port 3001
-music microfrontend on port 3002
-news microfrontend on port 3003
-sports microfrontend on port 3004
-player microfrontend on port 3005
-static content will be served on port 5000
-Container application on port 3000
+- movie microfrontend on port 3001
+- music microfrontend on port 3002
+- news microfrontend on port 3003
+- sports microfrontend on port 3004
+- player microfrontend on port 3005
+- static content will be served on port 5000
+- Container application on port 3000
 
 Navigate to http://localhost:3000 to see the micro-frontends running through container application
 
